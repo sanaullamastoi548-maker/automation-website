@@ -120,26 +120,22 @@
 
         // Form Logic Placeholder
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyDSiYPdF3HM-ZklzVbLz-8_j197HfNVlGzp4IzO5pycUSPGdSpDWEhZUy1AIXi3jGz/exec';
+const form = document.getElementById('contactForm');
 
-
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          if(scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-             alert("Thank you! Form system is active (Connect Google Sheets URL in code later).");
-             form.reset();
-             return;
-          }
-          document.getElementById('submitBtn').innerText = "Sending...";
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(() => {
-              alert("Thank you! I will contact you soon.");
-              form.reset();
-              document.getElementById('submitBtn').innerText = "Send Message";
-            })
-            .catch(error => console.error('Error!', error.message));
-        });
-    </script>
-</body>
-</html>
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById('submitBtn');
+  if(submitBtn) submitBtn.innerText = "Sending...";
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+       alert("Thank you! I will contact you soon.");
+       form.reset();
+       if(submitBtn) submitBtn.innerText = "Send Message";
+    })
+    .catch(error => {
+       console.error('Error!', error.message);
+       if(submitBtn) submitBtn.innerText = "Send Message";
+    });
+});
