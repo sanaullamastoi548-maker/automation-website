@@ -10,26 +10,23 @@
     <style>
         :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
         html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+        body { background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; margin: 0; font-family: sans-serif; }
 
         /* Progress Bar */
         #progressBar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--primary-yellow); z-index: 10000; }
 
-        /* Navbar Blur */
+        /* Navbar */
         nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 10%; z-index: 1000; transition: all 0.4s ease; }
         nav.scrolled { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
 
-        /* Animation */
+        /* Animations */
         [data-aos] { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
         [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
 
         .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.5s ease, box-shadow 0.5s ease; }
         .card:hover { transform: translateY(-12px) scale(1.05); box-shadow: 0 15px 40px rgba(245, 158, 11, 0.25); border-color: var(--primary-yellow); }
 
-        /* Contact Form Styles */
-        .form-control { padding: 15px; border-radius: 10px; border: none; background: #1e293b; color: white; width: 100%; font-size: 1rem; }
-        .btn-submit { padding: 15px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
-        .btn-submit:hover { opacity: 0.9; transform: scale(1.02); }
+        .btn-main { padding: 1rem 2rem; border-radius: 50px; text-decoration: none; color: white; font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
     </style>
 </head>
 <body>
@@ -62,36 +59,21 @@
         </div>
     </section>
 
-    <section id="contact" style="padding: 6rem 10%; max-width: 800px; margin: auto;">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Get In <span style="color:#f59e0b;">Touch</span></h2>
-        <p style="text-align: center; color: #94a3b8; margin-bottom: 3rem;">Have a project? Fill out the form or reach out directly.</p>
+    <section id="contact" style="padding: 6rem 10%; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to <span style="color:#f59e0b;">Automate?</span></h2>
+        <p style="color: #94a3b8; margin-bottom: 3rem; max-width: 600px; margin: auto;">I am available for new projects. Let's discuss your requirements via WhatsApp or Email.</p>
         
-        <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px; background: #151f32; padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);" data-aos="fade-up">
-            <input type="text" name="Name" placeholder="Your Name" required class="form-control">
-            <input type="email" name="Email" placeholder="Your Email" required class="form-control">
-            <textarea name="Message" placeholder="How can I help you with automation?" rows="5" required class="form-control"></textarea>
-            <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
-        </form>
-
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem;">
-            <a href="https://www.fiverr.com/s/kLqKwqN" target="_blank" style="padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; background: #1dbf73; color: white;">
-                <i class="fas fa-arrow-up-right-from-square"></i> Order on Fiverr
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/923043597308" target="_blank" class="btn-main" style="background: #25d366;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
             </a>
-            <a href="https://wa.me/923043597308" target="_blank" style="padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: white;">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="mailto:sanaullamastoi548@gmail.com" style="padding: 0.8rem 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; border: 2px solid var(--text-white); color: white;">
+            <a href="mailto:sanaullamastoi548@gmail.com" class="btn-main" style="background: var(--primary-yellow); color: #000;">
                 <i class="fas fa-envelope"></i> Email Me
             </a>
         </div>
     </section>
 
-    <a href="https://wa.me/923043597308" target="_blank" style="position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background: #25d366; color: white; border-radius: 50%; display:flex; align-items:center; justify-content:center; font-size:30px; z-index:999; box-shadow:0 10px 20px rgba(37,211,102,0.3);">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <script>
-        // Progress Bar & Navbar Scroll Effect
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop;
             let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -99,42 +81,13 @@
             document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
         });
 
-        // Intersection Observer (with Sequential Delay)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("aos-animate"); });
         }, { threshold: 0.1 });
-        
-        document.querySelectorAll("[data-aos]").forEach((el, index) => {
-            el.style.transitionDelay = (index * 150) + "ms";
-            observer.observe(el);
-        });
+        document.querySelectorAll("[data-aos]").forEach((el, index) => { el.style.transitionDelay = (index * 150) + "ms"; observer.observe(el); });
 
-        // Loader
         window.addEventListener('load', () => { document.getElementById('loader').style.opacity = "0"; setTimeout(() => document.getElementById('loader').style.display = "none", 500); });
-        
-        // Optimized Particles
         particlesJS("particles-js", {"particles": {"number": {"value": 40}, "size": {"value": 2}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
-
-        // Form Logic Placeholder
-        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          if(scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-             alert("Thank you! Form system is active (Connect Google Sheets URL in code later).");
-             form.reset();
-             return;
-          }
-          document.getElementById('submitBtn').innerText = "Sending...";
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(() => {
-              alert("Thank you! I will contact you soon.");
-              form.reset();
-              document.getElementById('submitBtn').innerText = "Send Message";
-            })
-            .catch(error => console.error('Error!', error.message));
-        });
     </script>
 </body>
 </html>
