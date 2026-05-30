@@ -74,12 +74,18 @@
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(() => { 
-                    alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!"); 
-                    form.reset(); 
+                    
+                    alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!\nYour message has been received successfully!");
+
+                 
+                form.reset(); 
                     document.getElementById('submitBtn').innerText = "Send Message"; 
                 })
-                .catch(error => {
-                    alert("معذرت، کوئی مسئلہ پیش آیا۔");
+                                .catch(error => {
+                    alert("معذرت، کوئی مسئلہ پیش آیا۔\nSorry, something went wrong.");
+                    document.getElementById('submitBtn').innerText = "Send Message";
+                });
+
                     document.getElementById('submitBtn').innerText = "Send Message";
                 });
         });
