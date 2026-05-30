@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWFR7FWDW4"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-NWFR7FWDW4'); </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanaullah | Google Automation Expert</title>
@@ -73,19 +71,13 @@
             document.getElementById('submitBtn').innerText = "Sending...";
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            
-    .then(() => { 
- alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!\nYour message has been received successfully!");
-
-                   form.reset(); 
+                .then(() => { 
+                    alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!"); 
+                    form.reset(); 
                     document.getElementById('submitBtn').innerText = "Send Message"; 
                 })
-                
                 .catch(error => {
-                    alert("معذرت، کوئی مسئلہ پیش آیا۔\nSorry, something went wrong.");
-                    document.getElementById('submitBtn').innerText = "Send Message";
-                });
-
+                    alert("معذرت، کوئی مسئلہ پیش آیا۔");
                     document.getElementById('submitBtn').innerText = "Send Message";
                 });
         });
