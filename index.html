@@ -1,108 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanaullah | Google Automation Expert</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <style>
-        :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanaullah | Google Automation Expert</title>
 
-        #progressBar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--primary-yellow); z-index: 10000; }
-        nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 10%; z-index: 1000; transition: all 0.4s ease; }
-        nav.scrolled { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(15px); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-        [data-aos] { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
-        [data-aos].aos-animate { opacity: 1; transform: translateY(0); }
+<style>
+:root{
+--bg-dark:#0f172a;
+--primary:#f59e0b;
+--text:#f8fafc;
+}
 
-        .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.5s ease, box-shadow 0.5s ease; }
-        .card:hover { transform: translateY(-12px) scale(1.05); box-shadow: 0 15px 40px rgba(245, 158, 11, 0.25); border-color: var(--primary-yellow); }
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg-dark);color:var(--text);font-family:Arial;overflow-x:hidden;}
 
-        .form-control { padding: 15px; border-radius: 10px; border: none; background: #1e293b; color: white; width: 100%; font-size: 1rem; }
-        .btn-submit { padding: 15px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
-        .btn-submit:hover { opacity: 0.9; transform: scale(1.02); }
-    </style>
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--primary);width:0%;z-index:9999;}
+
+nav{
+position:fixed;top:0;width:100%;
+padding:15px 10%;
+backdrop-filter:blur(10px);
+background:rgba(15,23,42,0.6);
+z-index:1000;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+h1{font-size:45px;}
+span{color:var(--primary);}
+
+section{padding:70px 10%;}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(245,158,11,0.3);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:var(--primary);
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:none;
+border-radius:8px;
+}
+
+</style>
 </head>
+
 <body>
 
-    <div id="progressBar"></div>
-    <div id="loader" style="position: fixed; width: 100%; height: 100%; background: var(--bg-dark); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease;"><h1>Sanaullah.</h1></div>
-    
-    <nav id="navbar">
-        <a href="#" style="color:white; font-size: 1.5rem; text-decoration: none; font-weight: 700;">Sanaullah<span>.</span></a>
-    </nav>
-    
-    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></div>
+<div id="progress"></div>
 
-    <section class="hero" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 5%;">
-        <div data-aos="fade-up">
-            <h1 style="font-size: 3.5rem; line-height: 1.2;">Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
-            <p style="color: #94a3b8; margin: 1.5rem 0; font-size: 1.2rem; max-width: 700px;">Helping Schools and Businesses automate workflows using Google Forms, Google Sheets, WhatsApp and Apps Script solutions.</p>
-            <div style="margin-top: 2rem;">
-                <a href="#contact" style="padding: 1rem 2.5rem; background: var(--primary-yellow); border-radius: 50px; text-decoration: none; color: #000; font-weight: 700; display: inline-block;">Work With Me</a>
-            </div>
-        </div>
-    </section>
+<nav>
+<b>Sanaullah<span>.</span></b>
+</nav>
 
-    <section id="services" style="padding: 6rem 10%;">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">My <span style="color:var(--primary-yellow)">Services</span></h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div class="card" data-aos="fade-up"><i class="fab fa-wpforms" style="color:var(--primary-yellow); font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i><h3 style="margin-bottom: 0.5rem;">Google Forms Automation</h3><p style="color: #94a3b8;">Advanced form handling and instant notifications.</p></div>
-            <div class="card" data-aos="fade-up"><i class="fas fa-chart-line" style="color:var(--primary-yellow); font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i><h3 style="margin-bottom: 0.5rem;">Google Sheets Dashboard</h3><p style="color: #94a3b8;">Data visualization and real-time analytics.</p></div>
-            <div class="card" data-aos="fade-up"><i class="fab fa-whatsapp" style="color:var(--primary-yellow); font-size: 2.5rem; margin-bottom: 1rem; display: block;"></i><h3 style="margin-bottom: 0.5rem;">WhatsApp Integration</h3><p style="color: #94a3b8;">Connect your sheets/forms with WhatsApp API.</p></div>
-        </div>
-    </section>
+<div id="particles-js"></div>
 
-    <section id="contact" style="padding: 6rem 10%; max-width: 800px; margin: auto;">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Get In <span style="color:#f59e0b;">Touch</span></h2>
-        <p style="text-align: center; color: #94a3b8; margin-bottom: 3rem;">Have a project? Fill out the form or reach out directly.</p>
-        
-        <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px; background: #151f32; padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);" data-aos="fade-up">
-            <input type="text" name="Name" placeholder="Your Name" required class="form-control">
-            <input type="email" name="Email" placeholder="Your Email" required class="form-control">
-            <textarea name="Message" placeholder="How can I help you with automation?" rows="5" required class="form-control"></textarea>
-            <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
-        </form>
-    </section>
+<div class="hero">
+<div>
+<h1>Sanaullah <span>Automation</span></h1>
+<p>Google Sheets | Forms | WhatsApp Automation</p>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+</div>
 
-    <script>
-        window.addEventListener("scroll", () => {
-            let scrollTop = document.documentElement.scrollTop;
-            let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            document.getElementById("progressBar").style.width = (scrollTop / scrollHeight) * 100 + "%";
-            document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
-        });
+<section>
+<h2>My Services</h2>
+<div class="grid">
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add("aos-animate"); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll("[data-aos]").forEach((el, index) => { el.style.transitionDelay = (index * 150) + "ms"; observer.observe(el); });
+<div class="card">
+<i class="fa fa-file"></i>
+<h3>Google Forms Automation</h3>
+</div>
 
-        window.addEventListener('load', () => { document.getElementById('loader').style.opacity = "0"; setTimeout(() => document.getElementById('loader').style.display = "none", 500); });
-        particlesJS("particles-js", {"particles": {"number": {"value": 40}, "size": {"value": 2}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
+<div class="card">
+<i class="fa fa-table"></i>
+<h3>Google Sheets Dashboard</h3>
+</div>
 
-        // یے رہا آپ کا گوگل ایپ اسکرپٹ کا لنک
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyDSiYPdF3HM-ZklzVbLz-8_j197HfNVlGzp4IzO5pycUSPGdSpDWEhZUy1AIXi3jGz/exec';
-        
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          document.getElementById('submitBtn').innerText = "Sending...";
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(() => {
-              alert("Thank you! Your message has been sent to Google Sheets.");
-              form.reset();
-              document.getElementById('submitBtn').innerText = "Send Message";
-            })
-            .catch(error => {
-              alert("Error! Check console.");
-              console.error('Error!', error.message);
-            });
-        });
-    </script>
+<div class="card">
+<i class="fa fa-whatsapp"></i>
+<h3>WhatsApp Integration</h3>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+
+<form id="form">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="phone" placeholder="Phone">
+<textarea name="message" placeholder="Message" required></textarea>
+<button class="btn" type="submit">Send</button>
+</form>
+
+<p id="msg"></p>
+</section>
+
+<script>
+
+// Progress bar
+window.addEventListener("scroll",()=>{
+let h=document.documentElement;
+let scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+document.getElementById("progress").style.width=scrolled+"%";
+});
+
+// Particle
+particlesJS("particles-js",{
+particles:{
+number:{value:50},
+color:{value:"#f59e0b"},
+line_linked:{enable:true,color:"#f59e0b"}
+}
+});
+
+// FORM SUBMIT TO GOOGLE SHEET
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+
+let data={
+name:this.name.value,
+email:this.email.value,
+phone:this.phone.value,
+message:this.message.value
+};
+
+fetch("PASTE_YOUR_APPS_SCRIPT_URL_HERE",{
+method:"POST",
+body:JSON.stringify(data)
+})
+.then(()=> {
+document.getElementById("msg").innerText="Message Sent Successfully!";
+this.reset();
+})
+.catch(()=> {
+document.getElementById("msg").innerText="Error!";
+});
+
+});
+
+</script>
+
 </body>
 </html>
