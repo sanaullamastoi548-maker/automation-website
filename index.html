@@ -10,21 +10,20 @@
 
 <style>
 :root{
---bg-dark:#0f172a;
---primary:#f59e0b;
+--bg:#0f172a;
+--card:#1e293b;
+--yellow:#f59e0b;
 --text:#f8fafc;
 }
 
 html{scroll-behavior:smooth;}
-body{margin:0;background:var(--bg-dark);color:var(--text);font-family:Arial;overflow-x:hidden;}
-
-#progress{position:fixed;top:0;left:0;height:3px;background:var(--primary);width:0%;z-index:9999;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial;overflow-x:hidden;}
 
 nav{
 position:fixed;top:0;width:100%;
 padding:15px 10%;
-backdrop-filter:blur(10px);
 background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
@@ -37,22 +36,10 @@ text-align:center;
 padding:20px;
 }
 
-h1{font-size:45px;}
-span{color:var(--primary);}
+h1{font-size:48px;}
+span{color:var(--yellow);}
 
 section{padding:70px 10%;}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(245,158,11,0.3);
-}
 
 .grid{
 display:grid;
@@ -60,40 +47,52 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
+.card{
+background:var(--card);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(245,158,11,0.2);
+}
+
 .btn{
 display:inline-block;
 padding:12px 25px;
-background:var(--primary);
+background:var(--yellow);
 color:black;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+border:none;
+cursor:pointer;
 }
 
 input,textarea{
 width:100%;
 padding:12px;
 margin:8px 0;
-border:none;
 border-radius:8px;
+border:none;
 }
 
+#msg{margin-top:10px;color:#25d366;}
 </style>
 </head>
 
 <body>
 
-<div id="progress"></div>
-
 <nav>
 <b>Sanaullah<span>.</span></b>
 </nav>
 
-<div id="particles-js"></div>
-
 <div class="hero">
 <div>
-<h1>Sanaullah <span>Automation</span></h1>
+<h1>Sanaullah <span>Google Automation</span></h1>
 <p>Google Sheets | Forms | WhatsApp Automation</p>
 <a href="#contact" class="btn">Contact Me</a>
 </div>
@@ -125,26 +124,19 @@ border-radius:8px;
 <h2>Contact Me</h2>
 
 <form id="form">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
 <input type="text" name="phone" placeholder="Phone">
 <textarea name="message" placeholder="Message" required></textarea>
-<button class="btn" type="submit">Send</button>
+<button class="btn" type="submit">Send Message</button>
 </form>
 
-<p id="msg"></p>
+<div id="msg"></div>
 </section>
 
 <script>
 
-// Progress bar
-window.addEventListener("scroll",()=>{
-let h=document.documentElement;
-let scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
-document.getElementById("progress").style.width=scrolled+"%";
-});
-
-// Particle
+// particles (same premium effect)
 particlesJS("particles-js",{
 particles:{
 number:{value:50},
@@ -153,7 +145,7 @@ line_linked:{enable:true,color:"#f59e0b"}
 }
 });
 
-// FORM SUBMIT TO GOOGLE SHEET
+// FORM → GOOGLE SHEET + EMAIL
 document.getElementById("form").addEventListener("submit",function(e){
 e.preventDefault();
 
@@ -164,16 +156,16 @@ phone:this.phone.value,
 message:this.message.value
 };
 
-fetch("PASTE_YOUR_APPS_SCRIPT_URL_HERE",{
+fetch("PASTE_YOUR_GOOGLE_SCRIPT_URL",{
 method:"POST",
 body:JSON.stringify(data)
 })
-.then(()=> {
+.then(()=>{
 document.getElementById("msg").innerText="Message Sent Successfully!";
 this.reset();
 })
-.catch(()=> {
-document.getElementById("msg").innerText="Error!";
+.catch(()=>{
+document.getElementById("msg").innerText="Error Sending Message";
 });
 
 });
