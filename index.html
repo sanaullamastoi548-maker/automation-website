@@ -55,16 +55,23 @@
     <script>
         particlesJS("particles-js", {"particles": {"number": {"value": 40}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
         
-        // یہاں اپنا گوگل اسکرپٹ لنک ڈالیں
-        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('submitBtn').innerText = "Sending...";
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(() => { alert("Message Sent!"); form.reset(); document.getElementById('submitBtn').innerText = "Send Message"; })
-                .catch(error => alert("Error!"));
-        });
-    </script>
-</body>
-</html>
+        <script>
+    // اپنا یہ نیا لنک یہاں پیسٹ کر دیں:
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
+    
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('submitBtn').innerText = "Sending...";
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(() => { 
+                alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!"); 
+                form.reset(); 
+                document.getElementById('submitBtn').innerText = "Send Message"; 
+            })
+            .catch(error => {
+                alert("معذرت، کوئی مسئلہ پیش آیا۔");
+                document.getElementById('submitBtn').innerText = "Send Message";
+            });
+    });
+</script>
