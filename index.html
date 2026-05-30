@@ -10,7 +10,7 @@
     <style>
         :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
         html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-        body { background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; margin: 0; }
+        body { background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
 
         #progressBar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--primary-yellow); z-index: 10000; }
         nav { position: fixed; top: 0; width: 100%; padding: 1.5rem 10%; z-index: 1000; transition: all 0.4s ease; }
@@ -22,8 +22,9 @@
         .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.5s ease, box-shadow 0.5s ease; }
         .card:hover { transform: translateY(-12px) scale(1.05); box-shadow: 0 15px 40px rgba(245, 158, 11, 0.25); border-color: var(--primary-yellow); }
 
-        .btn-main { padding: 1rem 2.5rem; background: var(--primary-yellow); border-radius: 50px; text-decoration: none; color: #000; font-weight: 700; display: inline-block; transition: 0.3s; }
-        .btn-main:hover { transform: scale(1.05); }
+        .form-control { padding: 15px; border-radius: 10px; border: none; background: #1e293b; color: white; width: 100%; font-size: 1rem; }
+        .btn-submit { padding: 15px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
+        .btn-submit:hover { opacity: 0.9; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -42,7 +43,7 @@
             <h1 style="font-size: 3.5rem; line-height: 1.2;">Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
             <p style="color: #94a3b8; margin: 1.5rem 0; font-size: 1.2rem; max-width: 700px;">Helping Schools and Businesses automate workflows using Google Forms, Google Sheets, WhatsApp and Apps Script solutions.</p>
             <div style="margin-top: 2rem;">
-                <a href="#contact" class="btn-main">Get In Touch</a>
+                <a href="#contact" style="padding: 1rem 2.5rem; background: var(--primary-yellow); border-radius: 50px; text-decoration: none; color: #000; font-weight: 700; display: inline-block;">Work With Me</a>
             </div>
         </div>
     </section>
@@ -56,14 +57,16 @@
         </div>
     </section>
 
-    <section id="contact" style="padding: 6rem 10%; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to <span style="color:#f59e0b;">Automate?</span></h2>
-        <p style="color: #94a3b8; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">I am available for new projects. Let's discuss your requirements via WhatsApp or Email.</p>
+    <section id="contact" style="padding: 6rem 10%; max-width: 800px; margin: auto;">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Get In <span style="color:#f59e0b;">Touch</span></h2>
+        <p style="text-align: center; color: #94a3b8; margin-bottom: 3rem;">Have a project? Fill out the form or reach out directly.</p>
         
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://wa.me/923043597308" target="_blank" style="padding: 1rem 2rem; background: #25d366; border-radius: 50px; text-decoration: none; color: white; font-weight: 700;">WhatsApp Me</a>
-            <a href="mailto:sanaullamastoi548@gmail.com" style="padding: 1rem 2rem; background: var(--primary-yellow); border-radius: 50px; text-decoration: none; color: #000; font-weight: 700;">Email Me</a>
-        </div>
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px; background: #151f32; padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);" data-aos="fade-up">
+            <input type="text" name="Name" placeholder="Your Name" required class="form-control">
+            <input type="email" name="Email" placeholder="Your Email" required class="form-control">
+            <textarea name="Message" placeholder="How can I help you with automation?" rows="5" required class="form-control"></textarea>
+            <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
+        </form>
     </section>
 
     <script>
@@ -81,6 +84,25 @@
 
         window.addEventListener('load', () => { document.getElementById('loader').style.opacity = "0"; setTimeout(() => document.getElementById('loader').style.display = "none", 500); });
         particlesJS("particles-js", {"particles": {"number": {"value": 40}, "size": {"value": 2}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
+
+        // یے رہا آپ کا گوگل ایپ اسکرپٹ کا لنک
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyDSiYPdF3HM-ZklzVbLz-8_j197HfNVlGzp4IzO5pycUSPGdSpDWEhZUy1AIXi3jGz/exec';
+        
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          document.getElementById('submitBtn').innerText = "Sending...";
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(() => {
+              alert("Thank you! Your message has been sent to Google Sheets.");
+              form.reset();
+              document.getElementById('submitBtn').innerText = "Send Message";
+            })
+            .catch(error => {
+              alert("Error! Check console.");
+              console.error('Error!', error.message);
+            });
+        });
     </script>
 </body>
 </html>
