@@ -53,10 +53,7 @@
     <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; z-index: -1;"></div>
 
     <script>
-        particlesJS("particles-js", {"particles": {"number": {"value": 40}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
-        
-            <script>
-        // پہلا حصہ: پارٹیکلز والا کوڈ
+        // پارٹیکلز کا کوڈ
         particlesJS("particles-js", {
             "particles": {
                 "number": {"value": 40}, 
@@ -65,7 +62,7 @@
             }
         });
         
-        // دوسرا حصہ: گوگل اسکرپٹ والا کوڈ (درست)
+        // گوگل اسکرپٹ کا کوڈ
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
         const form = document.getElementById('contactForm');
         
@@ -80,7 +77,6 @@
                     document.getElementById('submitBtn').innerText = "Send Message"; 
                 })
                 .catch(error => {
-                    console.error('Error!', error.message);
                     alert("معذرت، کوئی مسئلہ پیش آیا۔");
                     document.getElementById('submitBtn').innerText = "Send Message";
                 });
