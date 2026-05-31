@@ -19,47 +19,9 @@
         .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; }
         .form-control { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: none; background: #1e293b; color: white; box-sizing: border-box; }
         .btn-submit { width: 100%; padding: 15px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; color: #000; }
-        .btn-link { padding: 12px 20px; border-radius: 50px; text-decoration: none; color: white; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; margin: 5px; }
-    </style>
-</head>
-<body>
-
-    <section style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
-    
-    <div style="width: 220px; height: 220px; border: 5px solid #f59e0b; border-radius: 50%; overflow: hidden; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
-        <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" style="width: 100%; height: 100%; object-fit: cover;" loading="eager">
-    </div>
-    
-    <div>
-        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
-        <p style="font-size: 1.2rem; color: #94a3b8;">Helping Schools and Businesses automate workflows.</p>
-    </div>
-</section>
-
-    <section id="services" style="padding: 4rem 10%;">
-        <h2 style="text-align: center;">My <span style="color:var(--primary-yellow)">Services</span></h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2rem;">
-            <div class="card"><h3>Forms Automation</h3></div>
-            <div class="card"><h3>Sheets Dashboard</h3></div>
-            <div class="card"><h3>WhatsApp Integration</h3></div>
-        </div>
-    </section>
-
-    <section id="contact" style="padding: 4rem 10%; max-width: 600px; margin: auto;">
-        <h2 style="text-align: center;">Get In <span style="color:#f59e0b;">Touch</span></h2>
         
-        <form id="contactForm" style="background: #151f32; padding: 30px; border-radius: 20px;">
-            <input type="text" name="Name" placeholder="Your Name" required class="form-control">
-            <input type="email" name="Email" placeholder="Your Email" required class="form-control">
-            <textarea name="Message" placeholder="How can I help you?" rows="4" required class="form-control"></textarea>
-            <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
-        </form>
-
-        <div style="text-align: center; margin-top: 2rem;">
-    <h3 style="color: #f8fafc; margin-bottom: 1.5rem; font-size: 1.5rem;">Follow Me</h3>
-    
-    <style>
-        social-btn {
+        /* بٹنوں کی سٹائلنگ */
+        .social-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -74,83 +36,87 @@
         }
         .social-btn:hover { transform: scale(1.2); }
     </style>
+</head>
+<body>
 
-    <a href="https://www.linkedin.com/settings/open-weburls-in-app/" class="social-btn" style="background: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://www.facebook.com/sanaullah.Mastoi01" class="social-btn" style="background: #1877f2;"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/sanaullah_automation" class="social-btn" style="background: #e1306c;"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@sunallahmastoi" class="social-btn" style="background: #000000;"><i class="fab fa-tiktok"></i></a>
-</div>
+<section style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+    <div style="width: 220px; height: 220px; border: 5px solid #f59e0b; border-radius: 50%; overflow: hidden; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+        <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" style="width: 100%; height: 100%; object-fit: cover;" loading="eager">
+    </div>
+    <div>
+        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
+        <p style="font-size: 1.2rem; color: #94a3b8;">Helping Schools and Businesses automate workflows.</p>
+    </div>
+</section>
 
+<section id="services" style="padding: 4rem 10%;">
+    <h2 style="text-align: center;">My <span style="color:var(--primary-yellow)">Services</span></h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2rem;">
+        <div class="card"><h3>Forms Automation</h3></div>
+        <div class="card"><h3>Sheets Dashboard</h3></div>
+        <div class="card"><h3>WhatsApp Integration</h3></div>
+    </div>
+</section>
 
-        <div style="text-align: center; margin-top: 2rem;">
-    <h3 style="color: #f8fafc; margin-bottom: 1.5rem; font-size: 1.5rem;">Let's Connect</h3>
+<section id="contact" style="padding: 4rem 10%; max-width: 600px; margin: auto;">
+    <h2 style="text-align: center;">Get In <span style="color:#f59e0b;">Touch</span></h2>
     
-    <style>
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            color: white;
-            border-radius: 50%;
-            margin: 8px;
-            text-decoration: none;
-            transition: transform 0.3s ease;
+    <form id="contactForm" style="background: #151f32; padding: 30px; border-radius: 20px;">
+        <input type="text" name="Name" placeholder="Your Name" required class="form-control">
+        <input type="email" name="Email" placeholder="Your Email" required class="form-control">
+        <textarea name="Message" placeholder="How can I help you?" rows="4" required class="form-control"></textarea>
+        <button type="submit" id="submitBtn" class="btn-submit">Send Message</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <h3 style="color: #f8fafc; margin-bottom: 1.5rem; font-size: 1.5rem;">Let's Connect</h3>
+
+        <!-- اوپر: کام والے بٹن -->
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; flex-wrap: wrap;">
+            <a href="https://www.fiverr.com/s/kLqKwqN" class="social-btn" style="background: #1dbf73;"><i class="fas fa-briefcase"></i></a>
+            <a href="https://www.freelancer.com/u/sanaullam0" class="social-btn" style="background: #29b2fe;"><i class="fas fa-user-tie"></i></a>
+            <a href="https://wa.me/923043597308" class="social-btn" style="background: #25d366;"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:sanaullamastoi548@gmail.com" class="social-btn" style="background: var(--primary-yellow); color: #000;"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <!-- نیچے: سوشل میڈیا بٹن -->
+        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/settings/open-weburls-in-app/" class="social-btn" style="background: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/sanaullah.Mastoi01" class="social-btn" style="background: #1877f2;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sanaullah_automation" class="social-btn" style="background: #e1306c;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sunallahmastoi" class="social-btn" style="background: #000000;"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</section>
+
+<div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; z-index: -1;"></div>
+
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {"value": 40}, 
+            "color": {"value": "#f59e0b"}, 
+            "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}
         }
-       <!-- Combined Social & Contact Section -->
-<div style="text-align: center; margin-top: 2rem;">
-    <h3 style="color: #f8fafc; margin-bottom: 1.5rem; font-size: 1.5rem;">Let's Connect</h3>
-
-    <!-- اوپر: کام والے بٹن (فائور، فری لانسر، واٹس ایپ، ای میل) -->
-    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
-        <a href="https://www.fiverr.com/s/kLqKwqN" class="social-btn" style="background: #1dbf73; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fas fa-briefcase"></i></a>
-        <a href="https://www.freelancer.com/u/sanaullam0" class="social-btn" style="background: #29b2fe; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fas fa-user-tie"></i></a>
-        <a href="https://wa.me/923043597308" class="social-btn" style="background: #25d366; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:sanaullamastoi548@gmail.com" class="social-btn" style="background: var(--primary-yellow, #ffc107); display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: #000; text-decoration: none;"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <!-- نیچے: سوشل میڈیا بٹن (لِنکڈ اِن، فیس بک، انسٹاگرام، ٹک ٹاک) -->
-    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="https://www.linkedin.com/settings/open-weburls-in-app/" class="social-btn" style="background: #0077b5; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/sanaullah.Mastoi01" class="social-btn" style="background: #1877f2; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/sanaullah_automation" class="social-btn" style="background: #e1306c; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@sunallahmastoi" class="social-btn" style="background: #000000; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; color: white; text-decoration: none;"><i class="fab fa-tiktok"></i></a>
-    </div>
-
- 
-    </section>
-
-    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; z-index: -1;"></div>
-
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {"value": 40}, 
-                "color": {"value": "#f59e0b"}, 
-                "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}
-            }
-        });
-        
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
-        const form = document.getElementById('contactForm');
-        
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('submitBtn').innerText = "Sending...";
-            
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(() => { 
-                    alert("آپ کا پیغام کامیابی سے موصول ہو گیا ہے!\nYour message has been received successfully!"); 
-                    form.reset(); 
-                    document.getElementById('submitBtn').innerText = "Send Message"; 
-                })
-                .catch(error => {
-                    alert("معذرت، کوئی مسئلہ پیش آیا۔\nSorry, something went wrong.");
-                    document.getElementById('submitBtn').innerText = "Send Message";
-                });
-        });
-    </script>
+    });
+    
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        document.getElementById('submitBtn').innerText = "Sending...";
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(() => { 
+                alert("پیغام موصول ہو گیا!"); 
+                form.reset(); 
+                document.getElementById('submitBtn').innerText = "Send Message"; 
+            })
+            .catch(() => {
+                alert("کچھ مسئلہ پیش آیا۔");
+                document.getElementById('submitBtn').innerText = "Send Message";
+            });
+    });
+</script>
 </body>
 </html>
