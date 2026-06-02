@@ -16,7 +16,7 @@
     <style>
         :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
         body { background-color: var(--bg-dark); color: var(--text-white); margin: 0; font-family: sans-serif; }
-        .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; margin-bottom: 20px; }
+        .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; }
         .form-control { width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: none; background: #1e293b; color: white; box-sizing: border-box; }
         .btn-submit { width: 100%; padding: 15px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; color: #000; }
         
@@ -44,19 +44,8 @@
 <!-- Portfolio Projects Section -->
 <section id="portfolio" style="padding: 4rem 10%;">
     <h2 style="text-align: center; margin-bottom: 2rem;">My <span style="color:var(--primary-yellow)">Portfolio Projects</span></h2>
-    
-    <!-- Video Demo Section -->
-    <div class="card" style="max-width: 800px; margin: 0 auto 30px auto;">
-        <h3>Project Demo Video</h3>
-        <p style="color: #94a3b8; margin-bottom: 15px;">Watch how I automated the entire Connection Refreshment system.</p>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
-            <iframe src="https://www.youtube.com/embed/gCIWDm0kvPg" 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                    allowfullscreen></iframe>
-        </div>
-    </div>
-
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <!-- ہر کارڈ میں Screenshot کے لیے جگہ چھوڑ دی ہے، آپ یہاں <img> ٹیگ لگا سکتے ہیں -->
         <div class="card"><h3>Student Admission System</h3><p>Google Form to Sheet Automation.</p></div>
         <div class="card"><h3>WhatsApp Notifier</h3><p>Real-time alerts from Sheets.</p></div>
         <div class="card"><h3>Email Automation</h3><p>Bulk email solution via Apps Script.</p></div>
