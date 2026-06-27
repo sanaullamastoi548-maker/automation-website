@@ -64,6 +64,184 @@
   </iframe>
 </div> 
 <style>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Automation Lab</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.card{
+width:90%;
+max-width:550px;
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,.35);
+border:2px solid #f59e0b;
+}
+
+h1{
+color:#f59e0b;
+margin-bottom:10px;
+}
+
+h2{
+margin:15px 0;
+}
+
+p{
+color:#cbd5e1;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+button{
+background:#f59e0b;
+color:#000;
+padding:15px 30px;
+border:none;
+border-radius:10px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#result{
+margin-top:25px;
+padding:15px;
+border-radius:10px;
+background:#0f172a;
+border:1px solid #334155;
+font-weight:bold;
+}
+
+footer{
+margin-top:20px;
+color:#94a3b8;
+font-size:14px;
+}
+  body{
+
+margin:0;
+
+font-family:Arial,sans-serif;
+
+background:#0f172a;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+color:white;
+
+}
+
+.container{
+
+width:90%;
+
+max-width:450px;
+
+background:#1e293b;
+
+padding:30px;
+
+border-radius:20px;
+
+border:2px solid orange;
+
+box-shadow:0 0 20px rgba(255,165,0,.3);
+
+text-align:center;
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+padding:14px;
+
+margin-top:12px;
+
+border:none;
+
+border-radius:10px;
+
+background:#0f172a;
+
+color:white;
+
+box-sizing:border-box;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:14px;
+
+width:100%;
+
+background:orange;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#ffb733;
+
+}
+
+#result{
+
+margin-top:20px;
+
+padding:15px;
+
+border-radius:10px;
+
+background:#0f172a;
+
+}
   .service-card {
     max-width: 400px;
     margin: 20px auto;
@@ -167,10 +345,103 @@
   </div>
 </div>
 
-    
 
+    </style>
 
+</head>
 
+<body>
+
+<div class="card">
+
+<h1>🧪 Automation Lab</h1>
+
+<p>Build • Test • Improve • Deploy</p>
+
+<h2>AUTO-000</h2>
+
+<h3>System Health Check</h3>
+
+<p>
+This tool checks whether HTML, CSS and JavaScript are working correctly.
+</p>
+
+<button onclick="runTest()">
+Run Test
+</button>
+
+<div id="result">
+Waiting for Test...
+</div>
+
+<footer>
+Version 1.0
+</footer>
+
+</div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AUTO-001</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Automation Lab</h1>
+
+<h2>AUTO-001</h2>
+
+<p>Smart Contact Form Tester</p>
+
+<form id="contactForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+<input
+type="text"
+id="phone"
+placeholder="WhatsApp Number"
+required>
+
+<textarea
+id="message"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+
+Send Test
+
+</button>
+
+</form>
+
+<div id="result">
+
+Waiting...
+
+</div>
+
+</div>
 
 <!-- Hire Me Buttons -->
 <section style="text-align:center; padding:20px;">
@@ -245,6 +516,63 @@
             .then(() => { alert("پیغام موصول ہو گیا!"); form.reset(); document.getElementById('submitBtn').innerText = "Send Message"; })
             .catch(() => { alert("کچھ مسئلہ پیش آیا۔"); document.getElementById('submitBtn').innerText = "Send Message"; });
     });
+    <script>
+
+function runTest(){
+
+const now=new Date();
+
+document.getElementById("result").innerHTML=`
+
+✅ System Working Successfully<br><br>
+
+✔ HTML Loaded<br>
+
+✔ CSS Loaded<br>
+
+✔ JavaScript Running<br><br>
+
+📅 ${now.toLocaleDateString()}<br>
+
+⏰ ${now.toLocaleTimeString()}
+
+`;
+
+}
+  document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let phone=document.getElementById("phone").value;
+
+let message=document.getElementById("message").value;
+
+document.getElementById("result").innerHTML=`
+
+✅ Test Successful
+
+<hr>
+
+👤 ${name}<br><br>
+
+📧 ${email}<br><br>
+
+📱 ${phone}<br><br>
+
+💬 ${message}<br><br>
+
+🚀 Form Validation Passed
+
+`;
+
+});
+    
 </script>
 </body>
 </html>
