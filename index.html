@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanaullah | Google Automation Expert</title>
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    
-    <!-- زبان کا ڈیٹا یہاں لوڈ ہوگا -->
     <script src="languages.js"></script>
 </head>
 <body>
@@ -19,12 +15,12 @@
         <div class="dp-wrapper">
             <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" />
         </div>
-        <h1 data-i18n="title">Sanaullah | Google Automation</h1>
+        <h1 data-i18n="title">Sanaullah <span>Google Automation</span></h1>
         <p data-i18n="hero">I help schools and businesses save time with Google Apps Script Automation.</p>
     </section>
 
-    <!-- زبان تبدیل کرنے والے بٹن -->
-    <div class="language-switcher">
+    <!-- زبان کے بٹن -->
+    <div class="language-switcher" style="text-align:center; margin-bottom:20px;">
         <button onclick="changeLanguage('en')">English</button>
         <button onclick="changeLanguage('ur')">اردو</button>
         <button onclick="changeLanguage('ar')">العربية</button>
@@ -32,18 +28,21 @@
         <button onclick="changeLanguage('tr')">Türkçe</button>
     </div>
 
-    <!-- ====== 2. دو ٹولز (سائیڈ بائی سائیڈ) ====== -->
+    <!-- ====== 2. دو ٹولز ====== -->
     <div class="tools-grid">
         <div class="tool-item">
             <h2>🧪 Automation Lab</h2>
-            <h3>AUTO-000 | System Health Check</h3>
+            <p>Build • Test • Improve • Deploy</p>
+            <h3>AUTO-000</h3>
+            <h3>System Health Check</h3>
             <button onclick="runHealthTest()">Run Test</button>
             <div id="healthResult" class="tool-result-box">Waiting for Test...</div>
+            <footer>Version 1.0</footer>
         </div>
-
         <div class="tool-item">
             <h2>🚀 Automation Lab</h2>
-            <h3>AUTO-001 | Smart Contact Form Tester</h3>
+            <h3>AUTO-001</h3>
+            <p>Smart Contact Form Tester</p>
             <form id="testForm">
                 <input type="text" id="testName" placeholder="Your Name" required>
                 <input type="email" id="testEmail" placeholder="Your Email" required>
@@ -55,8 +54,38 @@
         </div>
     </div>
 
-    <!-- باقی حصہ وہی ہے جو آپ کا پہلے سے بہترین ہے -->
-    <!-- (یہاں پورٹ فولیو، ویڈیو اور دیگر سیکشنز اپنی جگہ برقرار رہیں گے) -->
+    <!-- ====== 3. پورٹ فولیو ====== -->
+    <section id="portfolio">
+        <h2>My <span>Portfolio Projects</span></h2>
+        <div class="portfolio-grid">
+            <div class="card"><h3>Student Admission System</h3><p>Google Form to Sheet Automation.</p></div>
+            <div class="card"><h3>WhatsApp Notifier</h3><p>Real-time alerts from Sheets.</p></div>
+            <div class="card"><h3>Email Automation</h3><p>Bulk email solution via Apps Script.</p></div>
+        </div>
+    </section>
+
+    <!-- ====== 4. یوٹیوب ویڈیو ====== -->
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/x4zdW0lsBNU" title="Google Automation Demo" allowfullscreen></iframe>
+    </div>
+
+    <!-- ====== 5. سروس کارڈز ====== -->
+    <div class="services-grid">
+        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Forms" alt="Forms" /><div class="service-title">1. Google Forms: The Data Collection Hub</div></div>
+        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Sheets" alt="Sheets" /><div class="service-title">2. Google Sheets: The Organized Database</div></div>
+        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Apps+Script" alt="Script" /><div class="service-title">3. Google Apps Script: The Magic of Automation</div></div>
+    </div>
+
+    <!-- ====== 6. ٹیسٹیمونیل اور سوشل بٹن ====== -->
+    <div class="testimonial-section">
+        <h3>Client Success Story</h3>
+        <p>Hear what my clients have to say about my automation services.</p>
+        <div class="hire-buttons">
+            <a href="https://www.fiverr.com/s/kLqKwqN" class="hire-btn fiverr">Fiverr</a>
+            <a href="https://www.upwork.com/freelancers/01720501585eadf64d" class="hire-btn upwork">Upwork</a>
+            <a href="https://www.freelancer.com/u/sanaullam0" class="hire-btn freelancer">Freelancer</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
