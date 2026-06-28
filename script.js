@@ -1,3 +1,15 @@
+
+// Particles Configuration
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 50 },
+            "color": { "value": "#f59e0b" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5 },
+            "size": { "value": 3 },
+            "line_linked": { "enable": true, "distance": 150, "color": "#f59e0b", "opacity": 0.4 }
+        }
+    });
 document.addEventListener("DOMContentLoaded", function () {
 
     // ====== Tool 1: Health Check ======
