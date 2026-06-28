@@ -174,3 +174,68 @@ root {
             color: #94a3b8;
             font-size: 13px;
         }
+ section#portfolio {
+            padding: 4rem 10%;
+        }
+        section#portfolio h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        section#portfolio h2 span {
+            color: var(--primary-yellow);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1a1a2e;
+            border-radius: 15px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .service-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .service-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff9800;
+        }
+        .service-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .lang-separator {
+            border-top: 1px solid #444;
+            margin: 10px 0;
+            padding-top: 10px;
+            font-style: italic;
+            color: #aaa;
+        }
+        .testimonial-section {
+            padding: 30px;
+            background-color: #1e293b;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 5%;
+        }
+        @media (max-width: 700px) {
+            .tools-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tool-item {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
