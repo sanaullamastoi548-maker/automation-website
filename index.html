@@ -1,105 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanaullah | Google Automation Expert</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <style>
-        :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
-        body { background-color: var(--bg-dark); color: var(--text-white); margin: 0; font-family: sans-serif; }
-        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-        .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; margin: 10px; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: auto; }
-        .tool-item { background: #1e293b; padding: 20px; border-radius: 20px; border: 2px solid var(--primary-yellow); text-align: center; }
-        .tool-result-box { background: #0f172a; padding: 15px; margin-top: 10px; border-radius: 10px; }
-        .social-btn { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 50%; margin: 5px; color: white; text-decoration: none; }
-        .hire-btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin: 10px; display: inline-block; color: white; }
-        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .service-card { max-width: 500px; margin: 20px auto; padding: 20px; background: #1a1a2e; border-radius: 15px; text-align: center; }
-    </style>
-</head>
-<body>
-    <div id="particles-js"></div>
 
-    <!-- Hero Section -->
-    <section style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-        <div style="width: 220px; height: 220px; border: 5px solid #f59e0b; border-radius: 50%; overflow: hidden; margin-bottom: 25px;">
-            <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" style="width: 100%; height: 100%; object-fit: cover;">
+    <!-- Font Awesome (آئیکنز کے لیے) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+  
+    <!-- اپنی علیحدہ CSS فائل -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+    <!-- Particles Div -->
+<div id="particles-js"></div>
+    
+     <!-- ====== 1. HERO SECTION (DP اور تعریف) ====== -->
+    <section class="hero">
+        <div class="dp-wrapper">
+            <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" />
         </div>
-        <h1>Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
+        <h1>Sanaullah <span>Google Automation</span></h1>
         <p>I help schools and businesses save time with Google Apps Script Automation.</p>
     </section>
 
-    <!-- Live Tools Section -->
+    <!-- ====== 2. دو ٹولز (سائیڈ بائی سائیڈ) ====== -->
     <div class="tools-grid">
+        <!-- Tool 1 -->
         <div class="tool-item">
             <h2>🧪 Automation Lab</h2>
-            <h3>AUTO-000 | System Health Check</h3>
-            <button onclick="runHealthTest()" style="background:var(--primary-yellow); padding:10px; border-radius:10px; cursor:pointer;">Run Test</button>
-            <div id="healthResult" class="tool-result-box">Waiting...</div>
+            <p>Build • Test • Improve • Deploy</p>
+            <h3>AUTO-000</h3>
+            <h3>System Health Check</h3>
+            <p>This tool checks whether HTML, CSS and JavaScript are working correctly.</p>
+            <button onclick="runHealthTest()">Run Test</button>
+            <div id="healthResult" class="tool-result-box">Waiting for Test...</div>
+            <footer>Version 1.0</footer>
         </div>
+
+        <!-- Tool 2 -->
         <div class="tool-item">
             <h2>🚀 Automation Lab</h2>
-            <h3>AUTO-001 | Form Tester</h3>
-            <input type="text" id="testName" placeholder="Your Name" style="padding:10px; border-radius:5px; border:none; width:80%;">
-            <button onclick="runFormTest()" style="background:var(--primary-yellow); padding:10px; border-radius:10px; cursor:pointer;">Send Test</button>
+            <h3>AUTO-001</h3>
+            <p>Smart Contact Form Tester</p>
+            <form id="testForm">
+                <input type="text" id="testName" placeholder="Your Name" required>
+                <input type="email" id="testEmail" placeholder="Your Email" required>
+                <input type="text" id="testPhone" placeholder="WhatsApp Number" required>
+                <textarea id="testMessage" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Test</button>
+            </form>
             <div id="testResult" class="tool-result-box">Waiting...</div>
         </div>
     </div>
 
-    <!-- Portfolio -->
-    <section id="portfolio" style="padding: 4rem 10%;">
-        <h2 style="text-align: center;">My Portfolio Projects</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-            <div class="card"><h3>Student Admission System</h3></div>
-            <div class="card"><h3>WhatsApp Notifier</h3></div>
-            <div class="card"><h3>Email Automation</h3></div>
+    <!-- ====== 3. پورٹ فولیو ====== -->
+    <section id="portfolio">
+        <h2>My <span>Portfolio Projects</span></h2>
+        <div class="portfolio-grid">
+            <div class="card"><h3>Student Admission System</h3><p>Google Form to Sheet Automation.</p></div>
+            <div class="card"><h3>WhatsApp Notifier</h3><p>Real-time alerts from Sheets.</p></div>
+            <div class="card"><h3>Email Automation</h3><p>Bulk email solution via Apps Script.</p></div>
         </div>
     </section>
 
-    <!-- Video -->
-    <div style="max-width:800px; margin:auto; padding:20px;">
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/x4zdW0lsBNU" allowfullscreen></iframe>
+    <!-- ====== 4. یوٹیوب ویڈیو ====== -->
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/x4zdW0lsBNU" title="Google Automation Demo" allowfullscreen></iframe>
     </div>
 
-    <!-- Services -->
-    <div class="service-card">
-        <h3>1. Google Forms</h3>
-        <p>Data Collection Hub</p>
-    </div>
-    <div class="service-card">
-        <h3>2. Google Sheets</h3>
-        <p>Organized Database</p>
-    </div>
-    <div class="service-card">
-        <h3>3. Apps Script</h3>
-        <p>The Magic of Automation</p>
-    </div>
-
-    <!-- Contact Form -->
-    <section id="contact" style="padding: 4rem 10%; max-width: 600px; margin: auto;">
-        <h2 style="text-align: center;">Get In Touch</h2>
-        <form id="contactForm" style="background: #151f32; padding: 30px; border-radius: 20px;">
-            <input type="text" name="Name" placeholder="Name" style="width:100%; padding:15px; margin-bottom:10px; border-radius:10px;">
-            <textarea name="Message" placeholder="Message" style="width:100%; padding:15px; margin-bottom:10px; border-radius:10px;"></textarea>
-            <button type="submit" style="width:100%; padding:15px; background:var(--primary-yellow); border:none; border-radius:10px;">Send</button>
-        </form>
-    </section>
-
-    <!-- Social -->
-    <div style="text-align:center; padding-bottom:50px;">
-        <a href="https://www.linkedin.com/in/sanaulla-mastoi-7aaa9a3b0" class="social-btn" style="background:#0077b5;"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/923043597308" class="social-btn" style="background:#25d366;"><i class="fab fa-whatsapp"></i></a>
+    <!-- ====== 5. سروس کارڈز (Google Forms, Sheets, Script) ====== -->
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Forms" alt="Forms" />
+            <div class="service-title">1. Google Forms: The Data Collection Hub</div>
+            <div class="service-desc"><strong>English:</strong> Google Forms is the starting point... <div class="lang-separator">🇺🇸</div> <strong>اردو:</strong> گوگل فارم آپ کے آٹومیشن کا پہلا قدم ہے۔</div>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Sheets" alt="Sheets" />
+            <div class="service-title">2. Google Sheets: The Organized Database</div>
+            <div class="service-desc"><strong>English:</strong> Once a form is submitted... <div class="lang-separator">🇺🇸</div> <strong>اردو:</strong> جیسے ہی فارم جمع ہوتا ہے، ڈیٹا خود بخود گوگل شیٹ میں آ جاتا ہے۔</div>
+        </div>
+        <div class="service-card">
+            <img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Apps+Script" alt="Script" />
+            <div class="service-title">3. Google Apps Script: The Magic of Automation</div>
+            <div class="service-desc"><strong>English:</strong> Google Apps Script is the "brain"... <div class="lang-separator">🇺🇸</div> <strong>اردو:</strong> گوگل ایپ اسکرپٹ اس آٹومیشن کا "دماغ" ہے۔</div>
+        </div>
     </div>
 
-    <a href="https://wa.me/923043597308" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+    <!-- ====== 6. ٹیسٹیمونیل اور سوشل بٹن ====== -->
+    <div class="testimonial-section">
+        <h3>Client Success Story</h3>
+        <p>Hear what my clients have to say about my automation services.</p>
+        <p class="rating">⭐ Result: 5-Star Rating & Successful Google Forms Automation System.</p>
+        <div class="hire-buttons">
+            <a href="https://www.fiverr.com/s/kLqKwqN" target="_blank" class="hire-btn fiverr"><i class="fas fa-briefcase"></i> Fiverr</a>
+            <a href="https://www.upwork.com/freelancers/01720501585eadf64d" target="_blank" class="hire-btn upwork"><i class="fab fa-upwork"></i> Upwork</a>
+            <a href="https://www.freelancer.com/u/sanaullam0" target="_blank" class="hire-btn freelancer"><i class="fas fa-user-tie"></i> Freelancer</a>
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.fiverr.com/s/kLqKwqN" class="social-btn" style="background:#1dbf73;"><i class="fas fa-briefcase"></i></a>
+            <a href="https://www.freelancer.com/u/sanaullam0" class="social-btn" style="background:#29b2fe;"><i class="fas fa-user-tie"></i></a>
+            <a href="https://wa.me/923043597308" class="social-btn" style="background:#25d366;"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:sanaullamastoi548@gmail.com" class="social-btn" style="background:var(--primary-yellow); color:#000;"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
 
-    <script>
-        particlesJS("particles-js", {"particles": {"number": {"value": 50}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.4}}});
-        window.runHealthTest = function() { document.getElementById("healthResult").innerHTML = "✅ System Working Successfully"; };
-        window.runFormTest = function() { document.getElementById("testResult").innerHTML = "✅ Test Successful for " + document.getElementById("testName").value; };
-    </script>
+    <!-- ====== 7. فلوٹنگ واٹس ایپ بٹن ====== -->
+    <a href="https://wa.me/923043597308" class="float-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ====== 8. اپنی علیحدہ JavaScript فائل ====== -->
+    <script src="script.js"></script>
 </body>
 </html>
