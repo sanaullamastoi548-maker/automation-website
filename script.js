@@ -1,3 +1,17 @@
+function changeLanguage(lang) {
+    const elements = document.querySelectorAll("[data-i18n]");
+    elements.forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (languageData[lang] && languageData[lang][key]) {
+            el.innerText = languageData[lang][key];
+        }
+    });
+
+    // اردو اور عربی کے لیے RTL، باقی کے لیے LTR
+    document.body.dir = (lang === 'ur' || lang === 'ar') ? 'rtl' : 'ltr';
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // ====== Tool 1: Health Check ======
