@@ -1,3 +1,22 @@
+/* زبان کے بٹنوں کو سنٹر میں لانے کے لیے */
+.language-switcher {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.language-switcher button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px; /* سائز بڑا کرنے کے لیے */
+    cursor: pointer;
+    background-color: #f59e0b;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
 /* ----- Root Variables (تھیم) ----- */
 :root {
     --bg-dark: #0f172a;
