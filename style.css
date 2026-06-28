@@ -1,3 +1,6 @@
+* Particles Background */ 
+#particles-js { 
+    position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }   
 /* زبان کے بٹنوں کو سنٹر میں لانے کے لیے */
 .language-switcher {
     text-align: center;
