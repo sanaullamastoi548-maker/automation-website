@@ -1,241 +1,331 @@
-body{
-    background:#0f172a;
-    color:#fff;
+/* ----- Root Variables (تھیم) ----- */
+:root {
+    --bg-dark: #0f172a;
+    --primary-yellow: #f59e0b;
+    --text-white: #f8fafc;
 }
 
-.card{
-    background:#1e293b;
+/* ----- Base Reset ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.btn-submit{
-    background:#f59e0b;
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    margin: 0;
+    font-family: sans-serif;
 }
 
+/* ----- Hero Section ----- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
 
-root {
-            --bg-dark: #0f172a;
-            --primary-yellow: #f59e0b;
-            --text-white: #f8fafc;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            margin: 0;
-            font-family: sans-serif;
-        }
-        .card {
-            background: #1e293b;
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            text-align: center;
-        }
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: none;
-            background: #1e293b;
-            color: white;
-            box-sizing: border-box;
-        }
-        .btn-submit {
-            width: 100%;
-            padding: 15px;
-            border-radius: 10px;
-            border: none;
-            background: var(--primary-yellow);
-            font-weight: bold;
-            cursor: pointer;
-            color: #000;
-        }
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            color: white;
-            border-radius: 50%;
-            margin: 5px;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .social-btn:hover {
-            transform: scale(1.2);
-        }
-        .hire-btn {
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px;
-            display: inline-block;
-            color: white;
-            transition: 0.3s;
-        }
-        .hire-btn:hover {
-            transform: translateY(-5px);
-        }
-        .float-wa {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            text-decoration: none;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+.dp-wrapper {
+    width: 220px;
+    height: 220px;
+    border: 5px solid var(--primary-yellow);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
 
-        /* ----- نیا اضافہ: دو ٹولز کو سائیڈ میں لانے کے لیے ----- */
-        .tools-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1100px;
-            margin: 20px auto 40px;
-            padding: 0 15px;
-        }
-        .tool-item {
-            flex: 1 1 350px;
-            max-width: 500px;
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 20px;
-            border: 2px solid var(--primary-yellow);
-            text-align: center;
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
-        }
-        .tool-item h2 {
-            color: var(--primary-yellow);
-            margin: 10px 0;
-        }
-        .tool-item h3 {
-            margin: 15px 0 5px;
-        }
-        .tool-item p {
-            color: #94a3b8;
-            line-height: 1.5;
-        }
-        .tool-item input,
-        .tool-item textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 10px;
-            background: #0f172a;
-            color: white;
-            box-sizing: border-box;
-        }
-        .tool-item textarea {
-            min-height: 80px;
-        }
-        .tool-item button {
-            width: 100%;
-            padding: 14px;
-            background: var(--primary-yellow);
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            color: #000;
-            transition: 0.3s;
-            margin-top: 10px;
-        }
-        .tool-item button:hover {
-            background: #ffb733;
-            transform: scale(1.02);
-        }
-        .tool-result-box {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 10px;
-            background: #0f172a;
-            border: 1px solid #334155;
-            font-weight: bold;
-            text-align: left;
-            word-break: break-word;
-        }
-        .tool-item footer {
-            margin-top: 15px;
-            color: #94a3b8;
-            font-size: 13px;
-        }
- section#portfolio {
-            padding: 4rem 10%;
-        }
-        section#portfolio h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        section#portfolio h2 span {
-            color: var(--primary-yellow);
-        }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #1a1a2e;
-            border-radius: 15px;
-            text-align: center;
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-        .service-card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .service-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ff9800;
-        }
-        .service-desc {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-        .lang-separator {
-            border-top: 1px solid #444;
-            margin: 10px 0;
-            padding-top: 10px;
-            font-style: italic;
-            color: #aaa;
-        }
-        .testimonial-section {
-            padding: 30px;
-            background-color: #1e293b;
-            border-radius: 15px;
-            text-align: center;
-            margin: 20px 5%;
-        }
-        @media (max-width: 700px) {
-            .tools-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .tool-item {
-                max-width: 100%;
-                width: 100%;
-            }
-        }
+.dp-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: var(--primary-yellow);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+/* ----- دو ٹولز کو سائیڈ میں لانے والا گرڈ ----- */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 20px auto 40px;
+    padding: 0 15px;
+}
+
+.tool-item {
+    flex: 1 1 350px;
+    max-width: 500px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-yellow);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.tool-item h2 {
+    color: var(--primary-yellow);
+    margin: 10px 0;
+}
+
+.tool-item h3 {
+    margin: 15px 0 5px;
+}
+
+.tool-item p {
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.tool-item input,
+.tool-item textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.tool-item textarea {
+    min-height: 80px;
+}
+
+.tool-item button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-yellow);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.tool-item button:hover {
+    background: #ffb733;
+    transform: scale(1.02);
+}
+
+.tool-result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    font-weight: bold;
+    text-align: left;
+    word-break: break-word;
+}
+
+.tool-item footer {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* ----- پورٹ فولیو ----- */
+#portfolio {
+    padding: 4rem 10%;
+}
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#portfolio h2 span {
+    color: var(--primary-yellow);
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+}
+
+/* ----- ویڈیو ----- */
+.video-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+.video-wrapper iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* ----- سروس کارڈز ----- */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.service-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1a1a2e;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.service-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.service-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+.service-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.lang-separator {
+    border-top: 1px solid #444;
+    margin: 10px 0;
+    padding-top: 10px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* ----- ٹیسٹیمونیل ----- */
+.testimonial-section {
+    padding: 30px;
+    background-color: #1e293b;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 5%;
+}
+.testimonial-section h3 {
+    color: var(--primary-yellow);
+}
+.rating {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ----- ہائر بٹن ----- */
+.hire-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.hire-btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+    color: white;
+    transition: 0.3s;
+}
+.hire-btn:hover {
+    transform: translateY(-5px);
+}
+.fiverr { background: #1DBF73; }
+.upwork { background: #14A800; }
+.freelancer { background: #29B2FE; }
+
+/* ----- سوشل بٹن ----- */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.social-btn:hover {
+    transform: scale(1.2);
+}
+
+/* ----- فلوٹنگ واٹس ایپ ----- */
+.float-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ----- موبائل کے لیے ریسپانسیو ----- */
+@media (max-width: 700px) {
+    .tools-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tool-item {
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .video-wrapper iframe {
+        height: 220px;
+    }
+}
