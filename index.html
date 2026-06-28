@@ -1,92 +1,77 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanaullah | Google Automation Expert</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="languages.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
+        body { background-color: var(--bg-dark); color: var(--text-white); margin: 0; font-family: sans-serif; }
+        
+        /* Particles Background */
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+        
+        .card { background: #1e293b; padding: 2rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); text-align: center; margin: 10px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: auto; }
+        .tool-item { background: #1e293b; padding: 20px; border-radius: 20px; border: 2px solid var(--primary-yellow); text-align: center; }
+        .tool-result-box { background: #0f172a; padding: 15px; margin-top: 10px; border-radius: 10px; min-height: 50px; }
+        
+        button { padding: 10px 20px; border-radius: 10px; border: none; background: var(--primary-yellow); font-weight: bold; cursor: pointer; color: #000; }
+    </style>
 </head>
 <body>
 
-    <!-- ====== 1. HERO SECTION ====== -->
-    <section class="hero">
-        <div class="dp-wrapper">
-            <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" />
-        </div>
-        <h1 data-i18n="title">Sanaullah <span>Google Automation</span></h1>
-        <p data-i18n="hero">I help schools and businesses save time with Google Apps Script Automation.</p>
-    </section>
+<!-- Particles Div -->
+<div id="particles-js"></div>
 
-    <!-- زبان کے بٹن -->
-    <div class="language-switcher" style="text-align:center; margin-bottom:20px;">
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('ur')">اردو</button>
-        <button onclick="changeLanguage('ar')">العربية</button>
-        <button onclick="changeLanguage('fr')">Français</button>
-        <button onclick="changeLanguage('tr')">Türkçe</button>
+<!-- Hero Section -->
+<section style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+    <div style="width: 220px; height: 220px; border: 5px solid #f59e0b; border-radius: 50%; overflow: hidden; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
+        <img src="https://raw.githubusercontent.com/sanaullamastoi548-maker/automation-website/main/20260530_215907.png" alt="Sanaullah" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
+    <h1>Sanaullah <span style="color:var(--primary-yellow)">Google Automation</span></h1>
+    <p>I help schools and businesses save time with Google Apps Script Automation.</p>
+</section>
 
-    <!-- ====== 2. دو ٹولز ====== -->
-    <div class="tools-grid">
-        <div class="tool-item">
-            <h2>🧪 Automation Lab</h2>
-            <p>Build • Test • Improve • Deploy</p>
-            <h3>AUTO-000</h3>
-            <h3>System Health Check</h3>
-            <button onclick="runHealthTest()">Run Test</button>
-            <div id="healthResult" class="tool-result-box">Waiting for Test...</div>
-            <footer>Version 1.0</footer>
-        </div>
-        <div class="tool-item">
-            <h2>🚀 Automation Lab</h2>
-            <h3>AUTO-001</h3>
-            <p>Smart Contact Form Tester</p>
-            <form id="testForm">
-                <input type="text" id="testName" placeholder="Your Name" required>
-                <input type="email" id="testEmail" placeholder="Your Email" required>
-                <input type="text" id="testPhone" placeholder="WhatsApp Number" required>
-                <textarea id="testMessage" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Test</button>
-            </form>
-            <div id="testResult" class="tool-result-box">Waiting...</div>
-        </div>
+<!-- Tools -->
+<div class="tools-grid">
+    <div class="tool-item">
+        <h2>🧪 Automation Lab</h2>
+        <h3>AUTO-000 | System Health Check</h3>
+        <button onclick="runHealthTest()">Run Test</button>
+        <div id="healthResult" class="tool-result-box">Waiting for Test...</div>
     </div>
-
-    <!-- ====== 3. پورٹ فولیو ====== -->
-    <section id="portfolio">
-        <h2>My <span>Portfolio Projects</span></h2>
-        <div class="portfolio-grid">
-            <div class="card"><h3>Student Admission System</h3><p>Google Form to Sheet Automation.</p></div>
-            <div class="card"><h3>WhatsApp Notifier</h3><p>Real-time alerts from Sheets.</p></div>
-            <div class="card"><h3>Email Automation</h3><p>Bulk email solution via Apps Script.</p></div>
-        </div>
-    </section>
-
-    <!-- ====== 4. یوٹیوب ویڈیو ====== -->
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/x4zdW0lsBNU" title="Google Automation Demo" allowfullscreen></iframe>
+    <div class="tool-item">
+        <h2>🚀 Automation Lab</h2>
+        <h3>AUTO-001 | Form Tester</h3>
+        <form id="testForm">
+            <input type="text" id="testName" placeholder="Your Name" style="width:100%; padding:10px; margin-bottom:10px; border-radius:5px;">
+            <button type="submit">Send Test</button>
+        </form>
+        <div id="testResult" class="tool-result-box">Waiting...</div>
     </div>
+</div>
 
-    <!-- ====== 5. سروس کارڈز ====== -->
-    <div class="services-grid">
-        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Forms" alt="Forms" /><div class="service-title">1. Google Forms: The Data Collection Hub</div></div>
-        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Google+Sheets" alt="Sheets" /><div class="service-title">2. Google Sheets: The Organized Database</div></div>
-        <div class="service-card"><img src="https://via.placeholder.com/400x200/1a1a2e/white?text=Apps+Script" alt="Script" /><div class="service-title">3. Google Apps Script: The Magic of Automation</div></div>
-    </div>
+<script>
+    // Particles Configuration
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 50 },
+            "color": { "value": "#f59e0b" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5 },
+            "size": { "value": 3 },
+            "line_linked": { "enable": true, "distance": 150, "color": "#f59e0b", "opacity": 0.4 }
+        }
+    });
 
-    <!-- ====== 6. ٹیسٹیمونیل اور سوشل بٹن ====== -->
-    <div class="testimonial-section">
-        <h3>Client Success Story</h3>
-        <p>Hear what my clients have to say about my automation services.</p>
-        <div class="hire-buttons">
-            <a href="https://www.fiverr.com/s/kLqKwqN" class="hire-btn fiverr">Fiverr</a>
-            <a href="https://www.upwork.com/freelancers/01720501585eadf64d" class="hire-btn upwork">Upwork</a>
-            <a href="https://www.freelancer.com/u/sanaullam0" class="hire-btn freelancer">Freelancer</a>
-        </div>
-    </div>
+    // Tools Logic
+    window.runHealthTest = function() { document.getElementById("healthResult").innerHTML = "✅ System Working Successfully"; };
+    document.getElementById("testForm").addEventListener("submit", function(e) { e.preventDefault(); document.getElementById("testResult").innerHTML = "✅ Test Successful for " + document.getElementById("testName").value; });
+</script>
 
-    <script src="script.js"></script>
 </body>
 </html>
