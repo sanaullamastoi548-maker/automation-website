@@ -105,3 +105,67 @@ if (submitBtn) {
 
 // Finished
 console.log("🚀 All JavaScript Loaded Successfully");
+
+/* ===================================
+   GOOGLE AUTOMATION TOOLS
+   PART 1
+=================================== */
+
+// ================================
+// AUTO-000
+// System Health Check
+// ================================
+
+function runHealthTest() {
+
+    const now = new Date();
+
+    document.getElementById("healthResult").innerHTML = `
+        ✅ <b>System Working Successfully</b><br><br>
+
+        ✔ HTML Loaded<br>
+        ✔ CSS Loaded<br>
+        ✔ JavaScript Running<br>
+        ✔ Website Ready<br><br>
+
+        📅 ${now.toLocaleDateString()}<br>
+        ⏰ ${now.toLocaleTimeString()}
+    `;
+
+}
+
+// ================================
+// AUTO-001
+// Form Tester
+// ================================
+
+const testForm = document.getElementById("testForm");
+
+if (testForm) {
+
+    testForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("testName").value;
+        const email = document.getElementById("testEmail").value;
+        const phone = document.getElementById("testPhone").value;
+        const message = document.getElementById("testMessage").value;
+
+        document.getElementById("testResult").innerHTML = `
+            ✅ <b>Test Successful</b><br><br>
+
+            👤 ${name}<br><br>
+
+            📧 ${email}<br><br>
+
+            📱 ${phone}<br><br>
+
+            💬 ${message}<br><br>
+
+            🚀 Form Validation Passed
+        `;
+
+    });
+
+}
