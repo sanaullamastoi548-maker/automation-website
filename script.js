@@ -1,37 +1,107 @@
-// Particles.js initialization
-particlesJS("particles-js", {"particles": {"number": {"value": 40}, "color": {"value": "#f59e0b"}, "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}}});
+/* ===================================
+   PART 1
+   PARTICLES + GOOGLE APPS SCRIPT
+=================================== */
 
-// Contact Form submission logic
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
-const form = document.getElementById('contactForm');
-// باقی فارم والا کوڈ یہاں آئے گا
+// ---------- Particles Background ----------
 
-// 1. Particles.js initialization (اگر آپ کے پاس پارٹیکلز کا کوڈ ہے تو وہ یہاں رہے گا)
 particlesJS("particles-js", {
-    "particles": {
-        "number": {"value": 40}, 
-        "color": {"value": "#f59e0b"}, 
-        "line_linked": {"enable": true, "color": "#f59e0b", "opacity": 0.2}
+    particles: {
+        number: {
+            value: 40
+        },
+        color: {
+            value: "#f59e0b"
+        },
+        line_linked: {
+            enable: true,
+            color: "#f59e0b",
+            opacity: 0.2
+        },
+        move: {
+            speed: 2
+        }
     }
 });
 
-// 2. Google Form Submission Logic
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec';
-const form = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
+// ---------- Google Apps Script URL ----------
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    submitBtn.innerText = "Sending...";
-    
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(() => { 
-            alert("پیغام موصول ہو گیا!"); 
-            form.reset(); 
-            submitBtn.innerText = "Send Message"; 
+const scriptURL =
+"https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec";
+
+// ---------- Contact Form ----------
+
+const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+
+/* ===================================
+   PART 2
+   CONTACT FORM SUBMIT
+=================================== */
+
+if (form) {
+
+    form.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
+
+        fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form)
         })
-        .catch(() => { 
-            alert("کچھ مسئلہ پیش آیا۔"); 
-            submitBtn.innerText = "Send Message"; 
+
+        .then(function() {
+
+            alert("✅ پیغام کامیابی سے بھیج دیا گیا!");
+
+            form.reset();
+
+            submitBtn.innerText = "Send Message";
+            submitBtn.disabled = false;
+
+        })
+
+        .catch(function(error) {
+
+            console.error(error);
+
+            alert("❌ کچھ مسئلہ پیش آیا، دوبارہ کوشش کریں۔");
+
+            submitBtn.innerText = "Send Message";
+            submitBtn.disabled = false;
+
         });
+
+    });
+
+}
+
+/* ===================================
+   PART 3
+   EXTRA FUNCTIONS
+=================================== */
+
+// Console Message
+console.log("✅ Sanaullah Automation Website Loaded Successfully");
+
+// Smooth Loading
+window.addEventListener("load", function () {
+    document.body.style.opacity = "1";
 });
+
+// Prevent Multiple Clicks
+if (submitBtn) {
+    submitBtn.addEventListener("click", function () {
+        submitBtn.style.opacity = "0.8";
+
+        setTimeout(function () {
+            submitBtn.style.opacity = "1";
+        }, 300);
+    });
+}
+
+// Finished
+console.log("🚀 All JavaScript Loaded Successfully");
