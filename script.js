@@ -142,7 +142,7 @@ function runHealthTest() {
 const testForm = document.getElementById("testForm");
 
 if (testForm) {
-
+   
     testForm.addEventListener("submit", function (e) {
 
         e.preventDefault();
@@ -169,3 +169,60 @@ if (testForm) {
     });
 
 }
+
+/* ===================================
+   GOOGLE AUTOMATION TOOLS
+   PART 2
+=================================== */
+
+// Button Click Animation
+document.querySelectorAll(".tool-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        btn.style.transform="scale(0.97)";
+
+        setTimeout(function(){
+
+            btn.style.transform="scale(1)";
+
+        },150);
+
+    });
+
+});
+
+// Clear AUTO-001 Result After 10 Seconds
+
+if(testForm){
+
+    testForm.addEventListener("submit",function(){
+
+        setTimeout(function(){
+
+            const result=document.getElementById("testResult");
+
+            if(result){
+
+                result.innerHTML="Waiting for Test...";
+
+            }
+
+        },10000);
+
+    });
+
+}
+
+// Welcome Message
+
+window.addEventListener("load",function(){
+
+    console.log("🚀 Google Automation Tools Ready");
+
+});
+
+// Finished
+
+console.log("✅ AUTO-000 Ready");
+console.log("✅ AUTO-001 Ready");
