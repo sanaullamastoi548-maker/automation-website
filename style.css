@@ -1,3 +1,97 @@
 :root { --bg-dark: #0f172a; --primary-yellow: #f59e0b; --text-white: #f8fafc; }
 body { background-color: var(--bg-dark); color: var(--text-white); margin: 0; font-family: sans-serif; }
 /* باقی تمام سی ایس ایس کوڈ جو آپ نے دیا تھا وہ یہاں پیسٹ کریں */
+:root { 
+    --bg-dark: #0f172a; 
+    --primary-yellow: #f59e0b; 
+    --text-white: #f8fafc; 
+}
+
+body { 
+    background-color: var(--bg-dark); 
+    color: var(--text-white); 
+    margin: 0; 
+    font-family: sans-serif; 
+}
+
+.card { 
+    background: #1e293b; 
+    padding: 2rem; 
+    border-radius: 20px; 
+    border: 1px solid rgba(255,255,255,0.05); 
+    text-align: center; 
+}
+
+.form-control { 
+    width: 100%; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    border-radius: 10px; 
+    border: none; 
+    background: #1e293b; 
+    color: white; 
+    box-sizing: border-box; 
+}
+
+.btn-submit { 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 10px; 
+    border: none; 
+    background: var(--primary-yellow); 
+    font-weight: bold; 
+    cursor: pointer; 
+    color: #000; 
+}
+
+.social-btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 20px; 
+    color: white; 
+    border-radius: 50%; 
+    margin: 5px; 
+    text-decoration: none; 
+    transition: transform 0.3s ease; 
+}
+
+.social-btn:hover { 
+    transform: scale(1.2); 
+}
+
+.hire-btn { 
+    padding: 15px 30px; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin: 10px; 
+    display: inline-block; 
+    color: white; 
+    transition: 0.3s; 
+}
+
+.hire-btn:hover { 
+    transform: translateY(-5px); 
+}
+
+/* WhatsApp Floating Button */
+.float-wa { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background: #25d366; 
+    color: white; 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 30px; 
+    text-decoration: none; 
+    z-index: 1000; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+}
