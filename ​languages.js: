@@ -1,7 +1,1 @@
-const languageData = {
-    "en": { "title": "Google Automation Expert", "hero": "I help you save time with Google Apps Script." },
-    "ur": { "title": "گوگل آٹومیشن ماہر", "hero": "میں آپ کا وقت بچانے میں مدد کرتا ہوں۔" },
-    "ar": { "title": "خبير أتمتة جوجل", "hero": "أساعدك في توفير وقتك." },
-    "fr": { "title": "Expert en automatisation Google", "hero": "Je vous aide à gagner du temps." },
-    "tr": { "title": "Google Otomasyon Uzmanı", "hero": "Zaman kazanmanıza yardımcı oluyorum." }
-};
+
