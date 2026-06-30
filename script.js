@@ -27,8 +27,7 @@ particlesJS("particles-js", {
 // ---------- Google Apps Script URL ----------
 
 const scriptURL =
-"https://script.google.com/macros/s/AKfycbyb8XB_p_I5dMZfba5uHHgw22DrQRCUxULKgQjUSQn1CslnYHmAUQij0siuw6V_RAG1YA/exec";
-
+"https://script.google.com/macros/s/AKfycbwC1T46Olc5hgGLM-96PDqBtNOHRI2DTHLqqUs34nnBm3J4N53zIqc-gGFUvqpuVpYE/exec";
 // ---------- Contact Form ----------
 
 const form = document.getElementById("contactForm");
