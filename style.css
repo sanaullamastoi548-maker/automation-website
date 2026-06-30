@@ -553,5 +553,49 @@ body{
 }
 
 /* ===================================
+   LANGUAGE SELECTOR
+=================================== */
+
+.language-box{
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.language-box label{
+    display:block;
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:var(--primary-yellow);
+}
+
+#languageSelect{
+    width:260px;
+    max-width:100%;
+    padding:14px 18px;
+    border:2px solid var(--primary-yellow);
+    border-radius:12px;
+    background:var(--card-bg);
+    color:var(--text-white);
+    font-size:16px;
+    outline:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#languageSelect:hover{
+    border-color:#ffd54f;
+}
+
+#languageSelect:focus{
+    box-shadow:0 0 12px rgba(245,158,11,.4);
+}
+
+#languageSelect option{
+    background:#1e293b;
+    color:#fff;
+}
+
+/* ===================================
    END OF STYLE.CSS
 =================================== */
