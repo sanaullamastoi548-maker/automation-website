@@ -1,1 +1,79 @@
+/* ===================================
+   LANGUAGES DATA
+=================================== */
 
+const languages = {
+
+    en: {
+
+        heroTitle: "Google Automation",
+
+        heroText:
+        "I help schools and businesses save time with Google Apps Script Automation.",
+
+        toolsTitle: "Google Automation Tools",
+
+        toolsText:
+        "Test, Validate and Improve your Google Workspace Automation with professional built-in tools.",
+
+        healthTitle: "🧪 System Health Check",
+
+        healthDesc:
+        "Check whether your HTML, CSS and JavaScript are working correctly.",
+
+        testTitle: "🚀 Smart Contact Form Tester",
+
+        testDesc:
+        "Test your contact form instantly before deployment."
+
+    },
+
+    ur: {
+
+        heroTitle: "گوگل آٹومیشن",
+
+        heroText:
+        "میں گوگل ایپس اسکرپٹ کے ذریعے اسکولوں اور کاروبار کے لیے خودکار نظام تیار کرتا ہوں۔",
+
+        toolsTitle: "گوگل آٹومیشن ٹولز",
+
+        toolsText:
+        "اپنے گوگل ورک اسپیس آٹومیشن کو ٹیسٹ کریں، بہتر بنائیں اور ویلیڈیٹ کریں۔",
+
+        healthTitle: "🧪 سسٹم ہیلتھ چیک",
+
+        healthDesc:
+        "یہ ٹول HTML، CSS اور JavaScript کی درستگی چیک کرتا ہے۔",
+
+        testTitle: "🚀 اسمارٹ کانٹیکٹ فارم ٹیسٹر",
+
+        testDesc:
+        "فارم کو لائیو کرنے سے پہلے فوری ٹیسٹ کریں۔"
+
+    },
+
+    ar: {
+
+        heroTitle: "أتمتة جوجل",
+
+        heroText:
+        "أساعد المدارس والشركات على أتمتة أعمالها باستخدام Google Apps Script.",
+
+        toolsTitle: "أدوات الأتمتة",
+
+        toolsText:
+        "اختبر وطور نظام Google Workspace الخاص بك.",
+
+        healthTitle: "🧪 فحص النظام",
+
+        healthDesc:
+        "تحقق من عمل HTML و CSS و JavaScript.",
+
+        testTitle: "🚀 اختبار نموذج الاتصال",
+
+        testDesc:
+        "اختبر النموذج قبل النشر."
+
+    }
+
+};
