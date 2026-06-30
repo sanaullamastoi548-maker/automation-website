@@ -240,32 +240,32 @@ if (languageSelect) {
 
         if (!languages[lang]) return;
 
-        // Hero Section
-        document.querySelector(".hero-section h1 span").innerText =
+        // Hero
+        document.getElementById("heroTitle").innerText =
             languages[lang].heroTitle;
 
-        document.querySelector(".hero-section p").innerText =
+        document.getElementById("heroText").innerText =
             languages[lang].heroText;
 
         // Tools Heading
-        document.querySelector(".tools-heading h2").innerHTML =
-            `Google Automation <span>Tools</span>`;
+        document.getElementById("toolsTitle").innerHTML =
+            languages[lang].toolsTitle;
 
-        document.querySelector(".tools-heading p").innerText =
+        document.getElementById("toolsText").innerText =
             languages[lang].toolsText;
 
         // Tool 1
-        document.querySelectorAll(".tool-card h3")[0].innerText =
+        document.getElementById("healthTitle").innerText =
             languages[lang].healthTitle;
 
-        document.querySelectorAll(".tool-card p")[1].innerText =
+        document.getElementById("healthDesc").innerText =
             languages[lang].healthDesc;
 
         // Tool 2
-        document.querySelectorAll(".tool-card h3")[1].innerText =
+        document.getElementById("testTitle").innerText =
             languages[lang].testTitle;
 
-        document.querySelectorAll(".tool-card p")[2].innerText =
+        document.getElementById("testDesc").innerText =
             languages[lang].testDesc;
 
     });
