@@ -11,7 +11,7 @@ const languages = {
         heroText:
         "I help schools and businesses save time with Google Apps Script Automation.",
 
-        toolsTitle: "Google Automation Tools",
+        toolsTitle: "Google Automation <span>Tools</span>",
 
         toolsText:
         "Test, Validate and Improve your Google Workspace Automation with professional built-in tools.",
@@ -35,8 +35,7 @@ const languages = {
         heroText:
         "میں گوگل ایپس اسکرپٹ کے ذریعے اسکولوں اور کاروبار کے لیے خودکار نظام تیار کرتا ہوں۔",
 
-        toolsTitle: "گوگل آٹومیشن ٹولز",
-
+        toolsTitle: "گوگل آٹومیشن <span>ٹولز</span>",
         toolsText:
         "اپنے گوگل ورک اسپیس آٹومیشن کو ٹیسٹ کریں، بہتر بنائیں اور ویلیڈیٹ کریں۔",
 
@@ -59,7 +58,7 @@ const languages = {
         heroText:
         "أساعد المدارس والشركات على أتمتة أعمالها باستخدام Google Apps Script.",
 
-        toolsTitle: "أدوات الأتمتة",
+        toolsTitle: "أتمتة جوجل <span>الأدوات</span>",
 
         toolsText:
         "اختبر وطور نظام Google Workspace الخاص بك.",
