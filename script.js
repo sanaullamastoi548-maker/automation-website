@@ -225,3 +225,49 @@ window.addEventListener("load",function(){
 
 console.log("✅ AUTO-000 Ready");
 console.log("✅ AUTO-001 Ready");
+
+/* ===================================
+   LANGUAGE SWITCHER
+=================================== */
+
+const languageSelect = document.getElementById("languageSelect");
+
+if (languageSelect) {
+
+    languageSelect.addEventListener("change", function () {
+
+        const lang = this.value;
+
+        if (!languages[lang]) return;
+
+        // Hero Section
+        document.querySelector(".hero-section h1 span").innerText =
+            languages[lang].heroTitle;
+
+        document.querySelector(".hero-section p").innerText =
+            languages[lang].heroText;
+
+        // Tools Heading
+        document.querySelector(".tools-heading h2").innerHTML =
+            `Google Automation <span>Tools</span>`;
+
+        document.querySelector(".tools-heading p").innerText =
+            languages[lang].toolsText;
+
+        // Tool 1
+        document.querySelectorAll(".tool-card h3")[0].innerText =
+            languages[lang].healthTitle;
+
+        document.querySelectorAll(".tool-card p")[1].innerText =
+            languages[lang].healthDesc;
+
+        // Tool 2
+        document.querySelectorAll(".tool-card h3")[1].innerText =
+            languages[lang].testTitle;
+
+        document.querySelectorAll(".tool-card p")[2].innerText =
+            languages[lang].testDesc;
+
+    });
+
+}
