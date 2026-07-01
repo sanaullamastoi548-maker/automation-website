@@ -597,5 +597,62 @@ body{
 }
 
 /* ===================================
+   AUTO-002
+   GOOGLE FORMS & SHEETS REQUEST
+=================================== */
+
+.section-intro{
+    max-width:800px;
+    margin:40px auto 30px;
+    text-align:center;
+    font-size:18px;
+    color:var(--text-white);
+    line-height:1.7;
+}
+
+#automationRequestForm{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:25px;
+}
+
+#automationRequestForm .tool-input{
+    width:100%;
+    padding:15px 18px;
+    border:2px solid rgba(245,158,11,.25);
+    border-radius:12px;
+    background:rgba(255,255,255,.05);
+    color:#fff;
+    font-size:16px;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+#automationRequestForm .tool-input:focus{
+    border-color:#f59e0b;
+    box-shadow:0 0 12px rgba(245,158,11,.35);
+    outline:none;
+}
+
+#automationRequestForm textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+#automationRequestForm select{
+    cursor:pointer;
+}
+
+#automationRequestForm option{
+    background:#1e293b;
+    color:#fff;
+}
+
+#requestResult{
+    margin-top:20px;
+}
+
+/* ===================================
    END OF STYLE.CSS
 =================================== */
