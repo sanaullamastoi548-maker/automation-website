@@ -372,21 +372,20 @@ if (automationForm) {
 
         })
 
-        .catch(function(error){
+       .catch(function(error){
 
-            console.error(error);
+    console.error(error);
 
-            requestResult.innerHTML =
+    requestResult.innerHTML =
+    "❌ Connection Failed.<br>Please try again.";
 
-            "❌ Connection Failed.<br>Please try again.";
+})
 
-        });
+.finally(function(){
 
-       .finally(function () {
+    automationForm.reset();
 
-            automationForm.reset();
-
-        });
+});
 
     });
 
@@ -397,4 +396,4 @@ if (automationForm) {
    FINISHED
 =================================== */
 
-console.log("✅ AUTO-002 Google Forms & Sheets Ready");
+console.log("✅ AUTO-002 Google Forms & Sheets Ready"); 
