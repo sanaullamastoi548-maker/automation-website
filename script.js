@@ -271,3 +271,130 @@ if (languageSelect) {
     });
 
 }
+
+/* ===================================
+   AUTO-002
+   GOOGLE AUTOMATION REQUEST
+   PART 1
+=================================== */
+
+// Google Apps Script URL
+
+const automationURL =
+"https://script.google.com/macros/s/AKfycbwytgOvmmnEtRp_BTF6_O6N4YlVbUl0yVsuRboVdtzM8xrJga5IEHVF7i9BuzUlhwtQ/exec";
+
+// Form
+
+const automationForm =
+document.getElementById("automationRequestForm");
+
+// Result Box
+
+const requestResult =
+document.getElementById("requestResult");
+
+// Form Submit
+
+if (automationForm) {
+
+    automationForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        requestResult.innerHTML =
+        "⏳ Submitting your request...";
+
+        const formData = new FormData();
+
+        formData.append(
+            "clientName",
+            document.getElementById("clientName").value
+        );
+
+        formData.append(
+            "clientEmail",
+            document.getElementById("clientEmail").value
+        );
+
+        formData.append(
+            "clientPhone",
+            document.getElementById("clientPhone").value
+        );
+
+        formData.append(
+            "companyName",
+            document.getElementById("companyName").value
+        );
+
+        formData.append(
+            "serviceType",
+            document.getElementById("serviceType").value
+        );
+
+        formData.append(
+            "projectDetails",
+            document.getElementById("projectDetails").value
+        );
+
+       fetch(automationURL, {
+
+            method: "POST",
+
+            body: formData
+
+        })
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            if (data.success) {
+
+                requestResult.innerHTML =
+
+                "✅ Request Submitted Successfully.<br><br>" +
+
+                "<b>Request ID:</b> " +
+
+                data.requestId +
+
+                "<br><br>📧 Please check your email for confirmation.";
+
+            }
+
+            else {
+
+                requestResult.innerHTML =
+
+                "❌ " + data.message;
+
+            }
+
+        })
+
+        .catch(function(error){
+
+            console.error(error);
+
+            requestResult.innerHTML =
+
+            "❌ Connection Failed.<br>Please try again.";
+
+        });
+
+       .finally(function () {
+
+            automationForm.reset();
+
+        });
+
+    });
+
+}
+
+/* ===================================
+   AUTO-002
+   FINISHED
+=================================== */
+
+console.log("✅ AUTO-002 Google Forms & Sheets Ready");
